@@ -26,7 +26,7 @@ A language learning website built for a couple learning each other's languages: 
 
 ## Setup
 
-This site is hosted on GitHub Pages. To view it, visit [website URL].
+This site is hosted on GitHub Pages. To view it, visit https://vetzin.github.io/language-learning-website/
 
 ## About
 
