@@ -1,0 +1,201 @@
+/* Phrases Page Specific Styles */
+
+.phrases-intro {
+    background-color: var(--primary-blue-light);
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
+.categories-nav {
+    margin-top: 40px;
+}
+
+.categories-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-blue);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.category-btn:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Phrase Category Sections */
+.phrase-category {
+    padding: 60px 0;
+}
+
+.phrase-category:nth-child(odd) {
+    background-color: white;
+}
+
+.phrase-category:nth-child(even) {
+    background-color: var(--background);
+}
+
+.phrase-category h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.phrase-category h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 3px;
+}
+
+/* Phrase Table Styles */
+.phrase-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--shadow);
+    background-color: white;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+.phrase-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.phrase-row:last-child {
+    border-bottom: none;
+}
+
+.column {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-header .column {
+    justify-content: center;
+    align-items: center;
+}
+
+.phrase-row .phrase {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.transliteration {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.column .pronounce {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}
+
+/* Practice Tip Section */
+.practice-tip {
+    background-color: var(--primary-blue-light);
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 60px;
+}
+
+.practice-tip h3 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.practice-tip p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.practice-tip .btn {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .phrase-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-header {
+        display: none;
+    }
+    
+    .column {
+        position: relative;
+        padding-top: 40px;
+    }
+    
+    .column::before {
+        content: attr(data-title);
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-weight: 600;
+        color: var(--primary-blue);
+        font-size: 0.9rem;
+    }
+    
+    .column:nth-child(1)::before {
+        content: "English";
+    }
+    
+    .column:nth-child(2)::before {
+        content: "Finnish";
+    }
+    
+    .column:nth-child(3)::before {
+        content: "Greek";
+    }
+    
+    .phrase-row {
+        border-bottom: 10px solid var(--primary-blue-light);
+    }
+} 

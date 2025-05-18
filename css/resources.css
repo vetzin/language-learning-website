@@ -1,0 +1,193 @@
+/* Resources Page Styles */
+
+.resources-intro {
+    background-color: var(--primary-blue-light);
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
+/* Resource Sections */
+.resource-section {
+    padding: 70px 0;
+}
+
+.resource-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.resource-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 3px;
+}
+
+/* Finnish Section */
+.finnish {
+    background-color: var(--background);
+}
+
+.finnish h2 {
+    color: var(--primary-blue);
+}
+
+/* Greek Section */
+.greek {
+    background-color: white;
+}
+
+.greek h2 {
+    color: var(--greek-blue);
+}
+
+.greek h2::after {
+    background-color: var(--greek-blue);
+}
+
+/* Couple Section */
+.couple {
+    background-color: var(--primary-blue-light);
+}
+
+/* Resource Cards */
+.resource-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.resource-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow);
+    padding: 30px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.resource-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.greek .resource-card h3 {
+    color: var(--greek-blue);
+}
+
+.resource-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin-bottom: 25px;
+}
+
+.resource-list li:last-child {
+    margin-bottom: 0;
+}
+
+.resource-list a {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+}
+
+.greek .resource-list a {
+    color: var(--greek-blue);
+}
+
+.resource-list p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Custom Resources Section */
+.custom-resources {
+    padding: 70px 0;
+    background-color: var(--background);
+    text-align: center;
+}
+
+.custom-resources h2 {
+    margin-bottom: 20px;
+}
+
+.custom-resources > .container > p {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
+.ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.idea-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow);
+    padding: 30px;
+    text-align: left;
+    border-left: 4px solid var(--primary-blue);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.idea-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.idea-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.idea-card p {
+    color: var(--light-text);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resource-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .resource-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+} 

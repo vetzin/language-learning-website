@@ -1,0 +1,146 @@
+/* Activities Page Specific Styles */
+
+.activities-intro {
+    background-color: var(--primary-blue-light);
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
+/* Activity Cards */
+.activity-cards {
+    padding: 60px 0;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.activity-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.activity-card p {
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.difficulty {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.level {
+    background-color: var(--primary-blue-light);
+    color: var(--primary-blue);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.time {
+    color: var(--light-text);
+}
+
+.instructions {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.instructions h4 {
+    margin-bottom: 10px;
+    color: var(--dark-text);
+    font-size: 1rem;
+}
+
+.instructions ol {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.instructions li:last-child {
+    margin-bottom: 0;
+}
+
+/* Tracking Section */
+.tracking {
+    background-color: var(--primary-blue-light);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.tracking h2 {
+    margin-bottom: 20px;
+}
+
+.tracking p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+.progress-note {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow);
+    padding: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.progress-note h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+} 

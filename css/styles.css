@@ -1,0 +1,386 @@
+/* Global Styles */
+:root {
+    --primary-blue: #0072ce; /* Finnish blue */
+    --primary-light-blue: #53a6e2;
+    --primary-teal: #00aaa1;
+    --primary-blue-light: #e6f0fa;
+    --greek-blue: #0d5eaf;
+    --greek-light-blue: #7bafde;
+    --finnish-white: #ffffff;
+    --dark-text: #333333;
+    --light-text: #666666;
+    --background: #f9f9f9;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --success: #4caf50;
+    --heart: #ff4757;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--background);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-teal);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-teal);
+    color: white;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--greek-blue), var(--primary-blue));
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+header h1 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+header .subtitle {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    font-weight: 600;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--finnish-white);
+}
+
+nav a.active {
+    color: var(--finnish-white);
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--finnish-white);
+    border-radius: 3px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    background-color: var(--primary-blue-light);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.couple-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.person {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow);
+    width: 200px;
+}
+
+.flag {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.finland {
+    background: linear-gradient(to bottom, white 33%, white 33%, var(--primary-blue) 33%, var(--primary-blue) 100%);
+}
+
+.greece {
+    background-image: repeating-linear-gradient(
+        to bottom,
+        var(--greek-blue) 0%,
+        var(--greek-blue) 11.1%,
+        white 11.1%,
+        white 22.2%
+    );
+    position: relative;
+}
+
+.greece::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.3%;
+    height: 55.6%;
+    background-color: var(--greek-blue);
+}
+
+.greece::after {
+    content: '';
+    position: absolute;
+    top: 22.2%;
+    left: 0;
+    width: 33.3%;
+    height: 11.1%;
+    background-color: white;
+    box-shadow: 0 0 0 11.1% var(--greek-blue), 11.1% 0 0 0 white;
+}
+
+.heart {
+    font-size: 36px;
+    color: var(--heart);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Phrase of the Day */
+.phrase-of-the-day {
+    text-align: center;
+    background-color: white;
+}
+
+.phrase-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow);
+    padding: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.phrase-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.phrase-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.language {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--light-text);
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background-color: var(--primary-blue-light);
+    border-radius: 20px;
+}
+
+.phrase {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.transliteration {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+
+.pronounce {
+    background-color: transparent;
+    border: 2px solid var(--primary-blue);
+    border-radius: 30px;
+    padding: 8px 20px;
+    color: var(--primary-blue);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pronounce:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+/* Quick Lessons */
+.quick-lessons {
+    background-color: var(--background);
+}
+
+.lesson-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.lesson-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--shadow);
+}
+
+.lesson-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+}
+
+.lesson-card p {
+    margin-bottom: 25px;
+    color: var(--light-text);
+}
+
+/* Tips Section */
+.tips {
+    background-color: white;
+}
+
+.tips h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tips-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tip-item {
+    background-color: var(--primary-blue-light);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.tip-item h3 {
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .couple-intro {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .person {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .phrase {
+        font-size: 1.5rem;
+    }
+} 
